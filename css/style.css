@@ -96,7 +96,7 @@ padding:40px 60px;
 perspective:1200px;
 }
 
-/* LEFT PANEL */
+/* LEFT */
 
 .left{
 max-width:550px;
@@ -220,7 +220,7 @@ align-items:center;
 position:relative;
 }
 
-/* MOUSE FOLLOW SPOTLIGHT */
+/* SPOTLIGHT */
 
 .spotlight{
 position:absolute;
@@ -235,29 +235,20 @@ rgba(80,160,255,0.05) 55%,
 transparent 70%);
 
 filter:blur(70px);
-
 pointer-events:none;
-
 transform:translate(-50%,-50%);
-
 z-index:0;
 }
+
 .product-glow{
 position:absolute;
 width:520px;
 height:520px;
-
-background:radial-gradient(circle,
-rgba(120,200,255,0.25),
-transparent 70%);
-
+background:radial-gradient(circle, rgba(120,200,255,0.25), transparent 70%);
 filter:blur(60px);
-
 top:50%;
 left:50%;
-
 transform:translate(-50%,-50%);
-
 z-index:0;
 }
 
@@ -291,17 +282,8 @@ animation-delay:2s;
 }
 
 @keyframes soundwave{
-
-0%{
-transform:scale(0.7);
-opacity:0.7;
-}
-
-100%{
-transform:scale(1.5);
-opacity:0;
-}
-
+0%{transform:scale(0.7);opacity:0.7;}
+100%{transform:scale(1.5);opacity:0;}
 }
 
 /* HEADSET */
@@ -358,64 +340,8 @@ opacity:1;
 transform:scale(1.1);
 }
 
-/* MOBILE */
+/* RESPONSIVE */
 
-@media (max-width:900px){
-
-.hero{
-flex-direction:column;
-text-align:center;
-padding:30px;
-}
-
-.right{
-justify-content:center;
-margin-top:40px;
-}
-
-.headset-img{
-width:320px;
-}
-
-.h1-title{
-font-size:36px;
-}
-
-.price{
-font-size:48px;
-}
-
-.buttons{
-justify-content:center;
-}
-
-.social{
-right:20px;
-bottom:20px;
-}
-
-}
-
-@media (max-width:500px){
-
-.h1-title{
-font-size:28px;
-}
-
-.price{
-font-size:40px;
-}
-
-.btn-buy,
-.btn-cart{
-padding:12px 20px;
-font-size:13px;
-}
-
-.headset-img{
-width:260px;
-}
-}
 @media (max-width:768px){
 
 .hero{
@@ -429,13 +355,15 @@ gap:20px;
 max-width:100%;
 }
 
-.h1-title{
-font-size:32px;
-line-height:1.2;
+.top-bar{
+justify-content:center;
+flex-wrap:wrap;
+padding:15px;
+font-size:11px;
 }
 
-.tag{
-font-size:14px;
+.h1-title{
+font-size:30px;
 }
 
 .price{
@@ -454,12 +382,11 @@ margin-top:10px;
 
 .headset-img{
 width:260px;
-margin:auto;
 }
 
 .soundwaves{
-width:280px;
-height:280px;
+width:260px;
+height:260px;
 }
 
 .spotlight{
