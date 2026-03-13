@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Zebronics Wireless Headsets — Premium Audio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+/* 3D perspective */
+.hero{
+perspective:1200px;
+}
+
+/* ensure proper layering */
+.right{
+position:relative;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+}
+
+/* headset stays above effects */
+.headset-img{
+position:relative;
+z-index:2;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="noise"></div>
+
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+
+<nav class="top-bar">
+
+<a href="#" class="nav-link">HOME</a>
+
+<span class="nav-sep">|</span>
+
+<a href="#" class="nav-link">ABOUT</a>
+
+<span class="nav-sep">|</span>
+
+<a href="#" class="nav-link">CONTACT</a>
+
+<span class="nav-sep">|</span>
+
+<a href="#" class="nav-link">SUPPORT</a>
+
+</nav>
+
+<div class="nav-accent-line"></div>
+
+<section class="hero">
+
+<div class="left">
+
+<div class="badge">
+<span class="badge-dot"></span>
+NEW ARRIVAL 2024
+</div>
+
+<h1 class="h1-title">
+ZEBRONICS WIRELESS<br>
+HEADSETS
+</h1>
+
+<div class="taglines">
+
+<p class="tag tag-red">
+Enhance your sound. Enhance your life
+</p>
+
+<p class="tag tag-white">
+30 Hours of unstoppable playtime
+</p>
+
+<p class="tag tag-blue">
+Feel the difference instantly
+</p>
+
+</div>
+
+<div class="price-block">
+
+<span class="price-currency">₹</span>
+
+<h2 class="price">1999</h2>
+
+<div class="price-badge">BEST PRICE</div>
+
+</div>
+
+<div class="buttons">
+
+<button class="btn-buy">
+BUY NOW
+</button>
+
+<button class="btn-cart">
+ADD TO CART
+</button>
+
+</div>
+
+</div>
+
+<div class="right">
+
+<!-- spotlight -->
+<div class="spotlight"></div>
+<div class="product-glow"></div>
+<!-- soundwaves -->
+<div class="soundwaves">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<!-- product image -->
+<img src="images/headset.png" class="headset-img" alt="Zebronics Headset">
+
+</div>
+
+</section>
+
+<div class="social">
+
+<div class="social-label">
+FIND US ON
+</div>
+
+<div class="social-icons">
+
+<div class="social-item">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+</div>
+
+<div class="social-item">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+</div>
+
+<div class="social-item">
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968870.png">
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+/* 3D rotation */
+
+const hero = document.querySelector(".hero")
+const headset = document.querySelector(".headset-img")
+
+hero.addEventListener("mousemove", (e) => {
+
+const rect = hero.getBoundingClientRect()
+
+const x = e.clientX - rect.left
+const y = e.clientY - rect.top
+
+const rotateX = ((y / rect.height) - 0.5) * 18
+const rotateY = ((x / rect.width) - 0.5) * -18
+
+headset.style.transform =
+`rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
+
+})
+
+hero.addEventListener("mouseleave", () => {
+
+headset.style.transform = "rotateX(0deg) rotateY(0deg)"
+
+})
+
+</script>
+
+</body>
+</html>
